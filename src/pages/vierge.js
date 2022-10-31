@@ -1,16 +1,43 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import adminLayout from "../hoc/adminLayout"
 
-class AdminBlankPage extends React.Component {
-    constructor(props){
-        super(props);
+// img
+import axios from "axios";
 
-        this.state = {}
-    }
+const CasseAuto = () => {
+  const [Facture, setFacture] = useState(null);
+  async function fetchData() {
+    console.log("aaaaaaa");
+fetch('http://localhost:8083/getCasseAuto').then(data => data.json()).then (data => setFacture(data))
+console.log(Facture)
+    // axios
+    //   .get(`http://localhost:8089/factures/all`, {
+    //     headers: { "Access-Control-Allow-Origin": "*",
+    //     'Accept': 'application/json', mode: "no-cors",
+    //     headers: { "Content-Type" : "application/json charset=UTF-8"},
+    //     body: "entityJson",
+    //         'Content-Type': 'application/json'},
+    //   })
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     setFacture(res.data);
+    //   });
+  }
+  console.log(Facture)
 
-    render(){
-        return <>
- <div className="table-container">
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const deleteFacture = async (id) => {
+    axios.delete("http://localhost:8084/factures/remove-facture/" + id);
+    // const notify = () => toast("Facture deleted !");
+  };
+
+  return (
+    <>
+       <div className="table-container">
                 <div className="row">
                     <div className="col">
                         <h5 className="pb-2 mb-0">Table</h5>
@@ -21,9 +48,7 @@ class AdminBlankPage extends React.Component {
                         </button>
                     </div>
                 </div>
-                <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
-                </p>
+        
                 <div className="d-flex text-muted">
                     <table className="table">
                         <thead>
@@ -132,8 +157,8 @@ class AdminBlankPage extends React.Component {
                         </li>
                     </ul>
                 </nav>
-            </div>        </>
-    }
-}
-
-export default adminLayout(AdminBlankPage);
+            </div>
+    </>
+  );
+};
+export default adminLayout(CasseAuto);

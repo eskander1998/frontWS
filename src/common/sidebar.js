@@ -24,7 +24,7 @@ class Sidebar extends React.Component {
                             <i className="fa fa-dashboard"></i> Dashboard
                         </Link>
                     </li>
-                    <li className="mb-1">
+                    {/* <li className="mb-1">
                         <Link tag="a" className="" to="/blank-page">
                             <i className="fa fa-file-o"></i> Blank Page
                         </Link>
@@ -34,7 +34,63 @@ class Sidebar extends React.Component {
                         <Link tag="a" className="" to="/typography">
                         <i className="fa fa-text-width" aria-hidden="true"></i> Typography
                         </Link>
+                    </li> */}
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/casseauto">
+                        <i  aria-hidden="true"></i> Casse Auto
+                        </Link>
                     </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getEtat">
+                        <i  aria-hidden="true"></i> getEtat
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getMaisonVoiture">
+                        <i  aria-hidden="true"></i> getMaisonVoiture
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getDiagnostiqeur">
+                        <i  aria-hidden="true"></i> getDiagnostiqeur
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getMecanicien">
+                        <i  aria-hidden="true"></i> getMecanicien
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getVendeur">
+                        <i  aria-hidden="true"></i> getVendeur
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getGarage">
+                        <i  aria-hidden="true"></i> getGarage
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/hautegame">
+                        <i  aria-hidden="true"></i> hautegame
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getMarque">
+                        <i  aria-hidden="true"></i> getMarque
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getVehicules">
+                        <i  aria-hidden="true"></i> getVehicules
+                        </Link>
+                    </li>
+                    <li className="mb-1">
+                        <Link tag="a" className="" to="/getOption">
+                        <i  aria-hidden="true"></i> getOption
+                        </Link>
+                    </li>
+               
                     
                     {/* collapsable list item example */}
                     {/* <li className="mb-1">
