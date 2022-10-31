@@ -39,7 +39,7 @@ const Hautegame = () => {
       <div className="table-container">
         <div className="row">
           <div className="col">
-            <h5 className="pb-2 mb-0">Casse Auto</h5>
+            <h5 className="pb-2 mb-0">Les voitures haut de gamme</h5>
           </div>
           <div className="col text-right">
             <button className="btn btn-default low-height-btn">
@@ -69,7 +69,6 @@ const Hautegame = () => {
 
                   <td>{item.label}</td>
                   <td>{item.nomMarque}</td>
-
                 </tr>
               ))}
             </tbody>

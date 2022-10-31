@@ -25,6 +25,9 @@ const GetVehicules = () => {
       })
       .then((res) => {
         console.log(res.data);
+        var str = "^^http://www.w3.org/2001/XMLSchema#integer";
+        str = str.replace("^^", "");
+        res.data.prixVoiture=
         setFacture(res.data);
       });
   }
@@ -39,7 +42,7 @@ const GetVehicules = () => {
       <div className="table-container">
         <div className="row">
           <div className="col">
-            <h5 className="pb-2 mb-0">Casse Auto</h5>
+            <h5 className="pb-2 mb-0">Voiture</h5>
           </div>
           <div className="col text-right">
             <button className="btn btn-default low-height-btn">
@@ -59,7 +62,6 @@ const GetVehicules = () => {
                 <th>Label</th>
                 <th>Nom du Voiture</th>
                 <th>prix du Voiture</th>
-
               </tr>
             </thead>
             <tbody>
@@ -71,8 +73,7 @@ const GetVehicules = () => {
 
                   <td>{item.label}</td>
                   <td>{item.nomVoiture}</td>
-                  <td>{item.prixVoiture}</td>
-
+                  <td>{item.prixVoiture.replace("^^http://www.w3.org/2001/XMLSchema#integer", "")}</td>
                 </tr>
               ))}
             </tbody>

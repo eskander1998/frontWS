@@ -39,7 +39,7 @@ const GetMaisonVoiture = () => {
       <div className="table-container">
         <div className="row">
           <div className="col">
-            <h5 className="pb-2 mb-0">Casse Auto</h5>
+            <h5 className="pb-2 mb-0">Maison de voture</h5>
           </div>
           <div className="col text-right">
             <button className="btn btn-default low-height-btn">
